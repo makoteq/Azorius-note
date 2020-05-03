@@ -1,21 +1,31 @@
 <template>
-  <div id="app">
-    <router-view />
-  </div>
+  <b-col class="h-100 leftCol">
+    <div class="innerCon">
+      <p class="title">Hey You! note something:)</p>
+      <textarea
+        placeholder="K: Hello there!
+G: General Kenobi..."
+        rows="10"
+        maxlength="1000"
+      />
+      <input placeholder="Password" type="text" />
+      <button class="submit">Submit</button>
+    </div>
+  </b-col>
 </template>
 
-<style>
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap");
-body {
-  margin: 0;
-}
-#app {
-  font-family: "Source Sans Pro", sans-serif;
-  text-align: center;
-  color: #2c3e50;
-  margin: 0;
-}
+<script>
+export default {
+  name: "addComponent",
+  data() {
+    return {
+      active: false
+    };
+  }
+};
+</script>
 
+<style lang="scss" scoped>
 .leftCol {
   width: 100%;
   margin: 0;
@@ -33,7 +43,8 @@ body {
   height: 100%;
   margin: 0 auto;
 }
-input {
+input,
+textarea {
   background-color: #f3f3f3;
   border: none;
   line-height: 1.5;
@@ -46,25 +57,7 @@ input {
     outline: 0;
   }
 }
-textarea {
-  width: 100%;
-  height: 80%;
-}
-.wrapper {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #ebecf0;
-}
-.container {
-  border-radius: 10px;
-  box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc;
-  width: 80%;
-  min-height: 60vh;
-  padding: 0;
-}
+
 .submit {
   border-radius: 20px;
   border: none;
