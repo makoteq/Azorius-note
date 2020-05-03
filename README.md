@@ -1,5 +1,5 @@
-# azorius
-
+# Azorius note
+Simple and clear note for saving private notes in cloud without login
 ## Project setup
 ```
 npm install
